@@ -1,0 +1,40 @@
+.popup
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: white
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+  padding: 20px
+  text-align: center
+  background-color: $bg_color__blue
+  p
+    @extend %extend__text
+    font-weight: bold
+    letter-spacing: -0.5px
+    margin-bottom: 20px
+    font-size: 2em
+
+  &-content
+    @include flexContainer(column, center, center)
+    max-width: 400px
+    height: 300px
+    margin: 0 auto
+    text-align: center
+
+.close
+  position: absolute
+  top: 10px
+  right: 10px
+  font-size: 50px
+  cursor: pointer
+
+.emoji-buttons
+  display: flex
+  justify-content: space-evenly
+  width: 100%
+
+.emoji
+  font-size: 50px
+  cursor: pointer
