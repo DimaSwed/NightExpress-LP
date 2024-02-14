@@ -18,6 +18,8 @@
     width: 100%
 
   .chouse__form-tabs
+    display: flex
+    flex-wrap: wrap
 
   .chouse__form-tablink
     @extend %extend__text
@@ -120,3 +122,100 @@
       line-height: 160.2%
       opacity: 60%
       font-weight: 600
+
+// MEDIA BREAKPOINTS
+
+@include desktop
+  .chouse
+
+@include laptop
+  .chouse
+    margin-bottom: 80px
+    .chouse__form-left-container
+      margin-right: 30px
+    .chouse__form-input-group
+      margin-right: 15px
+
+@include tablet
+  .chouse
+    .chouse__inner
+      h2
+        margin-bottom: 50px
+
+    .chouse__form-tabs
+      margin: 0 auto
+
+    .chouse__form-tablink:first-child
+      @include width_height(100px, 50px)
+    .chouse__form-tablink:nth-child(2)
+      @include width_height(70px, 50px)
+    .chouse__form-tablink:last-child
+      @include width_height(400px, 50px)
+
+    .chouse__form-tabcontent
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      margin: 0 auto
+      padding: 20px
+
+    .chouse__form-left-container
+      margin-right: 0
+      padding: 15px
+      margin-bottom: 15px
+
+    .chouse__form-text-block
+      margin: 0 auto
+      text-align: center
+
+    .chouse__form-right-container
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+      align-items: center
+      width: 100%
+
+    .chouse__form-download-extension
+      margin: 0 auto
+
+@include mobile
+  .chouse
+    .chouse__form-tabs
+      justify-content: center
+
+    .chouse__form-text-block
+      p
+        margin-bottom: 20px
+
+    .chouse__form-inputs-container
+      margin: 0 auto
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: auto
+      grid-gap: 10px
+
+    .chouse__form-input-title
+      padding: 0
+    .chouse__form-input-group
+      margin-right: 0px
+      text-align: center
+      margin-bottom: 15px
+
+@include mobileExtra
+  .chouse
+    .chouse .chouse__form-tabs
+
+    .chouse__form-tablink:first-child
+      @include width_height(300px, 60px)
+    .chouse__form-tablink:nth-child(2)
+      @include width_height(300px, 60px)
+    .chouse__form-tablink:last-child
+      @include width_height(300px, 60px)
+
+    .chouse__form-inputs-container
+      margin: 0 auto
+      grid-template-columns: repeat(1, 2fr)
+
+    .chouse__form-right-container
+      justify-content: space-between

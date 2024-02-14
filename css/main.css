@@ -743,6 +743,10 @@ header .btn_sucsess {
   max-width: 1170px;
   width: 100%;
 }
+.chouse .chouse__form-tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
 .chouse .chouse__form-tablink {
   line-height: 160.2%;
   font-weight: 500;
@@ -871,6 +875,108 @@ header .btn_sucsess {
   font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+  .chouse {
+    margin-bottom: 80px;
+  }
+  .chouse .chouse__form-left-container {
+    margin-right: 30px;
+  }
+  .chouse .chouse__form-input-group {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .chouse .chouse__inner h2 {
+    margin-bottom: 50px;
+  }
+  .chouse .chouse__form-tabs {
+    margin: 0 auto;
+  }
+  .chouse .chouse__form-tablink:first-child {
+    width: 100px;
+    height: 50px;
+  }
+  .chouse .chouse__form-tablink:nth-child(2) {
+    width: 70px;
+    height: 50px;
+  }
+  .chouse .chouse__form-tablink:last-child {
+    width: 400px;
+    height: 50px;
+  }
+  .chouse .chouse__form-tabcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .chouse .chouse__form-left-container {
+    margin-right: 0;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .chouse .chouse__form-text-block {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .chouse .chouse__form-right-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .chouse .chouse__form-download-extension {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  .chouse .chouse__form-tabs {
+    justify-content: center;
+  }
+  .chouse .chouse__form-text-block p {
+    margin-bottom: 20px;
+  }
+  .chouse .chouse__form-inputs-container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 10px;
+  }
+  .chouse .chouse__form-input-title {
+    padding: 0;
+  }
+  .chouse .chouse__form-input-group {
+    margin-right: 0px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 414px) {
+  .chouse .chouse__form-tablink:first-child {
+    width: 300px;
+    height: 60px;
+  }
+  .chouse .chouse__form-tablink:nth-child(2) {
+    width: 300px;
+    height: 60px;
+  }
+  .chouse .chouse__form-tablink:last-child {
+    width: 300px;
+    height: 60px;
+  }
+  .chouse .chouse__form-inputs-container {
+    margin: 0 auto;
+    grid-template-columns: repeat(1, 2fr);
+  }
+  .chouse .chouse__form-right-container {
+    justify-content: space-between;
+  }
+}
 .logistics {
   margin-bottom: 130px;
   overflow: hidden;
