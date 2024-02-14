@@ -13,6 +13,7 @@
       font-weight: 600
       letter-spacing: -0.5px
       margin-bottom: 23px
+      text-align: center
     p
       @extend %extend__text
       opacity: 60%
@@ -23,9 +24,13 @@
 
   .about__inner_grid-container
     display: grid
-    grid-template-columns: repeat(4, 270px)
-    grid-template-rows: repeat(2, 220px)
+    // grid-template-columns: repeat(4, 270px)
+    // grid-template-rows: repeat(2, 220px)
     grid-gap: 20px 30px
+    // grid-template-columns: repeat(4, 1fr)
+    // grid-template-rows: auto
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(2, 220px)
 
   .about__inner_card
     @include flexContainer(column, space-evenly, center)
@@ -51,3 +56,38 @@
       line-height: 150%
       font-weight: bold
       font-size: 1.4em
+
+@include desktop
+  .about
+
+@include laptop
+  .about
+    margin-bottom: 80px
+
+    .about__inner_grid-container
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: auto
+
+@include tablet
+  .about
+    .about__inner_grid-container
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: auto
+      grid-gap: 10px
+
+@include mobile
+  .about
+    .about__inner_grid-container
+      grid-template-columns: repeat(3, 1fr)
+    .about__inner_card
+      @include width_height(140px, 100px)
+      border-radius: 20px
+      padding: 10px
+    .about__inner_card-img
+      img
+        @include width_height(50px, 30px)
+
+@include mobileExtra
+  .about
+    .about__inner_grid-container
+      grid-template-columns: repeat(2, 1fr)

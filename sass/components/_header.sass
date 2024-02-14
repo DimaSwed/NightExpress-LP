@@ -357,3 +357,10 @@ header
         div:last-child
           input
             margin-bottom: 0px
+
+@include mobileExtra
+  header
+    form
+      #input1,
+      #input3
+        @include width_height(300px, 60px)
