@@ -28,5 +28,26 @@ img
 a
   text-decoration: none
 
-  &:hover
-    text-decoration: underline
+input::placeholder
+  color: $color_input
+  font-weight: 600
+  font-size: 16px
+
+input[name="input"]
+  color: $color_blue
+  font-weight: 600
+  font-size: 16px
+
+label
+  font-weight: 500
+  font-size: 16px
+  opacity: 60%
+
+.round-checkbox
+  @extend %extend__round_checkbox
+  margin-left: 18px
+  margin-right: 10px
+
+@include mobile
+  body
+    font-size: 42.5%

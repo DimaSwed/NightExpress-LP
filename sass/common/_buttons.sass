@@ -11,24 +11,10 @@
   letter-spacing: -0.5px
 
   &:hover
-    background-color: $color_brown
-
-input::placeholder
-  color: $color_input
-  font-weight: 600
-  font-size: 16px
-
-input[name="input"]
-  color: $color_blue
-  font-weight: 600
-  font-size: 16px
-
-label
-  font-weight: 500
-  font-size: 16px
-  opacity: 60%
-
-.round-checkbox
-  @extend %extend__round_checkbox
-  margin-left: 18px
-  margin-right: 10px
+    background: $color_brown
+    color: white
+    letter-spacing: 0.2px
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57)
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57)
+    box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57)
+    transition: all 0.4s ease 0s

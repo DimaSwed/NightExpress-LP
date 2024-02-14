@@ -19,10 +19,10 @@
 
 						<div class="navbar__menu">
 							<ul>
-								<li><a href="#">Рассчитать доставку</a></li>
-								<li><a href="#">Дополнительные услуги</a></li>
-								<li><a href="#">Контакты</a></li>
-								<li><a href="#">Заказать</a></li>
+								<li><a href="#header">Рассчитать доставку</a></li>
+								<li><a href="#chouse">Дополнительные услуги</a></li>
+								<li><a href="#contacts">Контакты</a></li>
+								<li><a href="#request">Заказать</a></li>
 							</ul>
 						</div>
 						<!-- mobile menu -->
@@ -33,10 +33,10 @@
 							</label>
 
 							<ul class="hamburger__menu_box">
-								<li class="hamburger__menu_box_item"><a href="#">Рассчитать доставку</a></li>
-								<li class="hamburger__menu_box_item"><a href="#">Дополнительные услуги</a></li>
-								<li class="hamburger__menu_box_item"><a href="#">Контакты</a></li>
-								<li class="hamburger__menu_box_item"><a href="#">Заказать</a></li>
+								<li class="hamburger__menu_box_item"><a href="#info">Рассчитать доставку</a></li>
+								<li class="hamburger__menu_box_item"><a href="#chouse">Дополнительные услуги</a></li>
+								<li class="hamburger__menu_box_item"><a href="#contacts">Контакты</a></li>
+								<li class="hamburger__menu_box_item"><a href="#request">Заказать</a></li>
 								<span></span>
 								<li><a href="tel:+74952606853">+7 (495) 260 68 53</a></li>
 								<li><a href="mailto:info@A5-EXPRESS.ru">info@A5-EXPRESS.ru</a></li>
@@ -111,7 +111,7 @@
 							</form>
 						</div>
 
-						<div class="header__form_info">
+						<div class="header__form_info" id="info">
 							<table>
 								<tr>
 									<th>Срок доставки:</th>
@@ -246,7 +246,7 @@
 		</div>
 
 		<!-- CHOUSE CITY -->
-		<div class="chouse">
+		<div class="chouse" id="chouse">
 			<div class="container">
 				<div class="chouse__inner">
 					<h2 class="chouse__inner-title">Выберите город, в котором требуется услуга ответственного хранения</h2>
@@ -416,7 +416,7 @@
 
 		<!-- REQUEST -->
 
-		<div class="request">
+		<div class="request" id="request">
 			<div class="container">
 				<div class="request__form">
 					<h2>Название заголовка</h2>
@@ -662,7 +662,7 @@
 
 		<!-- CONTACTS -->
 
-		<div class="contacts">
+		<div class="contacts" id="contacts">
 			<div class="container">
 				<div class="contacts__inner">
 					<div class="contacts__inner_map" id="map"></div>
@@ -767,20 +767,6 @@
 		<script src="js/map.js"></script>
 		<script src="js/scroll_to_up.js"></script>
 		<script src="js/popup.js"></script>
-		<script>
-			var menuToggle = document.getElementById('menu__toggle')
-			var menuBtn = document.querySelector('.menu__btn')
-			var menuBox = document.querySelector('.hamburger__menu_box')
-
-			menuBtn.addEventListener('click', function () {
-				if (menuToggle.checked) {
-					menuBox.style.visibility = 'hidden'
-					menuBox.style.left = '-54%'
-				} else {
-					menuBox.style.visibility = 'visible'
-					menuBox.style.left = '0'
-				}
-			})
-		</script>
+		<script src="js/burger.js"></script>
 	</body>
 </html>
