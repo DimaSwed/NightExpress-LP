@@ -63,6 +63,13 @@
     text-align: center
 
   .request__form_right-box
+    display: grid
+    grid-template-columns: repeat(1, auto)
+    gap: 20px 28px
+
+    & > div
+      display: flex
+      justify-content: space-between
 
   .request__form_textarea
     @include width_height(700px, 245px)
@@ -135,6 +142,7 @@
         line-height: 160.2%
         opacity: 60%
         text-align: center
+        max-width: 600px
       input
         top: 0
 
@@ -142,13 +150,93 @@
     @include width_height(252px, 56px)
     margin-bottom: 14px
 
-    // 
+// MEDIA BREAKPOINTS
 
-  .request__form_right-box
-    display: grid
-    grid-template-columns: repeat(1, auto)
-    gap: 20px 28px
+@include desktop
+  .request
+    .request__form_left-box
+      margin-right: 60px
 
-    & > div
+@include laptop
+  .request
+    margin-bottom: 80px
+    .request__form
+      h2
+        margin-bottom: 30px
+      form
+        @include flexContainer(column, flex-start, center)
+        margin-bottom: 30px
+
+    .request__form_left-box
+      margin-right: 0px
+
+@include tablet
+  .request
+
+@include mobile
+  .request
+    .request__form_right-box
+      .round-checkbox
+        margin-left: 5px
+
+    .request__form_right-box > div
       display: flex
-      justify-content: space-between
+      justify-content: space-around
+
+    .request__form_textarea
+      @include width_height(500px, 245px)
+      padding: 13px 48px
+
+    .request__form_input4
+      @include width_height(250px, 60px)
+
+    .request__form_select
+      @include width_height(300px, 60px)
+
+    .request__form_pushbox
+      div
+        label
+          text-align: left
+          font-size: 14px
+
+@include mobileExtra
+  .request
+
+    .request__form_right-box
+      grid-template-columns: repeat(1, auto)
+      gap: 10px 10px
+
+    .request__form_textarea
+      @include width_height(320px, 245px)
+
+    .request__form_input4
+      @include width_height(150px, 50px)
+
+    .request__form_select
+      margin: 0 auto
+
+    label
+      font-size: 12px
+
+    .request__form_input
+      @include width_height(300px, 50px)
+      padding: 10px 48px
+      &::placeholder
+        font-size: 12px
+        font-weight: 500
+
+    .request__form_input4
+      padding: 10px 48px
+      &::placeholder
+        font-size: 12px
+        font-weight: 500
+
+    .request__form_input2
+      @include width_height(80px, 50px)
+      &::placeholder
+        font-size: 12px
+        font-weight: 500
+    .request__form_checkbox-flex2
+
+      label
+        margin-right: 0px
