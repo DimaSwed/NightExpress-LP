@@ -25,7 +25,25 @@
 								<li><a href="#">Заказать</a></li>
 							</ul>
 						</div>
+						<!-- mobile menu -->
+						<div class="hamburger__menu">
+							<input id="menu__toggle" type="checkbox" class="menu__toggle" />
+							<label class="menu__btn" for="menu__toggle">
+								<span></span>
+							</label>
 
+							<ul class="hamburger__menu_box">
+								<li class="hamburger__menu_box_item"><a href="#">Рассчитать доставку</a></li>
+								<li class="hamburger__menu_box_item"><a href="#">Дополнительные услуги</a></li>
+								<li class="hamburger__menu_box_item"><a href="#">Контакты</a></li>
+								<li class="hamburger__menu_box_item"><a href="#">Заказать</a></li>
+								<span></span>
+								<li><a href="tel:+74952606853">+7 (495) 260 68 53</a></li>
+								<li><a href="mailto:info@A5-EXPRESS.ru">info@A5-EXPRESS.ru</a></li>
+							</ul>
+						</div>
+
+						<!--  -->
 						<div class="navbar__contacts">
 							<ul>
 								<li><a href="tel:+74952606853">+7 (495) 260 68 53</a></li>
@@ -749,5 +767,20 @@
 		<script src="js/map.js"></script>
 		<script src="js/scroll_to_up.js"></script>
 		<script src="js/popup.js"></script>
+		<script>
+			var menuToggle = document.getElementById('menu__toggle')
+			var menuBtn = document.querySelector('.menu__btn')
+			var menuBox = document.querySelector('.hamburger__menu_box')
+
+			menuBtn.addEventListener('click', function () {
+				if (menuToggle.checked) {
+					menuBox.style.visibility = 'hidden'
+					menuBox.style.left = '-54%'
+				} else {
+					menuBox.style.visibility = 'visible'
+					menuBox.style.left = '0'
+				}
+			})
+		</script>
 	</body>
 </html>

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 html, body, div, span, applet, object, iframe,
@@ -78,7 +79,7 @@ select {
   text-transform: none;
 }
 
-.popup p, .footer .footer__inner_context p, .footer .footer__inner_flex div:last-child p, .footer .footer__inner_flex div:first-child p, .contacts .contacts__inner_context table tr td, .contacts .contacts__inner_context table caption, .request .request__form_pushbox div label, .request .request__form_left-box p, .request .request__form h2, .logistics .logistics__inner_block_context p, .logistics .logistics__inner_block_context h2, .chouse .chouse__form-download-extension span, .chouse .chouse__form-download-title, .chouse .chouse__form-input-title, .chouse .chouse__form-text-block p, .chouse .chouse__form-tablink, .chouse .chouse__inner h2, .about .about__inner_card-text p, .about .about__inner_text p, .about .about__inner_text h2, header .header__form_info table tr td, header .header__form_info table tr th, header .header__form_context p, header .header__context_about p, header .header__context_about h1, header .navbar__contacts li, header .navbar__menu ul li {
+.popup p, .footer .footer__inner_context p, .footer .footer__inner_flex div:last-child p, .footer .footer__inner_flex div:first-child p, .contacts .contacts__inner_context table tr td, .contacts .contacts__inner_context table caption, .request .request__form_pushbox div label, .request .request__form_left-box p, .request .request__form h2, .logistics .logistics__inner_block_context p, .logistics .logistics__inner_block_context h2, .chouse .chouse__form-download-extension span, .chouse .chouse__form-download-title, .chouse .chouse__form-input-title, .chouse .chouse__form-text-block p, .chouse .chouse__form-tablink, .chouse .chouse__inner h2, .about .about__inner_card-text p, .about .about__inner_text p, .about .about__inner_text h2, header .header__form_info table tr td, header .header__form_info table tr th, header .header__form_context p, header .header__context_about p, header .header__context_about h1, header .navbar__contacts li, header .hamburger__menu_box a, header .navbar__menu ul li {
   color: #5F5F5F;
   font-size: 16px;
   font-weight: 400;
@@ -206,6 +207,9 @@ header {
   overflow: hidden;
   position: relative;
   margin-bottom: 111px;
+  /* скрываем чекбокс */
+  /* стилизуем кнопку */
+  /* элементы меню */
 }
 header .header__inner {
   display: flex;
@@ -228,6 +232,7 @@ header .navbar__logo img {
 header .navbar__menu {
   max-width: 651px;
   width: 100%;
+  display: block;
 }
 header .navbar__menu ul {
   display: flex;
@@ -242,6 +247,89 @@ header .navbar__menu ul li {
 header .navbar__menu ul li a {
   list-style-type: none;
   color: #5F5F5F;
+}
+header #menu__toggle {
+  opacity: 0;
+}
+header .menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 70px;
+  right: 10%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 100%;
+  /* контейнер меню */
+}
+header .hamburger__menu_box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -54%;
+  width: 230px;
+  height: auto;
+  margin: 0;
+  padding: 50px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #C5EEF9;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.3);
+}
+header .hamburger__menu_box span {
+  display: block;
+  margin: 20px auto;
+  max-width: 130px;
+  width: 100%;
+  height: 4px;
+  background-color: #382933;
+  margin-bottom: 42px;
+}
+header .hamburger__menu_box a {
+  font-size: 20px;
+  font-weight: 600;
+  list-style-type: none;
+  color: #5F5F5F;
+}
+header .hamburger__menu_box_item {
+  display: block;
+  padding: 12px 24px;
+}
+header .hamburger__menu_box_item:hover {
+  background-color: #382933;
+}
+header .hamburger__menu_box_item:hover a {
+  list-style-type: none;
+  color: #FFFFFF;
+}
+header #menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+header #menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+header #menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+header #menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+header .menu__btn > span,
+header .menu__btn > span::before,
+header .menu__btn > span::after {
+  transition-duration: 0.25s;
+}
+header .hamburger__menu_box {
+  transition-duration: 0.25s;
+}
+header .hamburger__menu_box_item {
+  transition-duration: 0.25s;
 }
 header .navbar__contacts ul {
   display: flex;
@@ -383,6 +471,54 @@ header .btn_sucsess {
   height: 51px;
 }
 
+@media (max-width: 767px) {
+  header .navbar__menu {
+    padding: 0 20px;
+    max-width: 651px;
+    width: auto;
+  }
+  header .navbar__menu ul {
+    text-align: center;
+    align-items: start;
+  }
+  header .navbar__menu ul li {
+    margin-right: 25px;
+  }
+  header .navbar__menu ul li:last-child {
+    margin-right: 0;
+  }
+}
+@media (max-width: 576px) {
+  header .navbar__menu {
+    display: none;
+  }
+  header .hamburger__menu_box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+  }
+  header .menu__btn > span,
+  header .menu__btn > span::before,
+  header .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #5F5F5F;
+  }
+  header .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  header .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  .navbar__contacts {
+    display: none;
+  }
+}
 .about {
   margin-bottom: 111px;
 }
