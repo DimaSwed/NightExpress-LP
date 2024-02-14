@@ -1,122 +1,122 @@
 .chouse
   margin-bottom: 75.21px
 
-.chouse__inner
-  @include flexContainer(column, center, center)
-  h2
-    @extend %extend__text
-    font-size: 4.6em
-    font-weight: bold
-    letter-spacing: -0.5px
-    margin-bottom: 100px
-    text-align: center
-    max-width: 970px
+  .chouse__inner
+    @include flexContainer(column, center, center)
+    h2
+      @extend %extend__text
+      font-size: 4.6em
+      font-weight: bold
+      letter-spacing: -0.5px
+      margin-bottom: 100px
+      text-align: center
+      max-width: 970px
 
-.chouse__form
-  @include flexContainer(column, center, start)
-  max-width: 1170px
-  width: 100%
+  .chouse__form
+    @include flexContainer(column, center, start)
+    max-width: 1170px
+    width: 100%
 
-.chouse__form-tabs
+  .chouse__form-tabs
 
-.chouse__form-tablink
-  @extend %extend__text
-  line-height: 160.2%
-  font-weight: 500
-  color: $color_blue
-  border: 2px solid $color_main
-  margin: -2px
-  background-color: $color_white
-  &:hover
-    color: $color_white
-    background-color: $color_main
-
-.chouse__form-tablink:first-child
-  @include width_height(170px, 50px)
-.chouse__form-tablink:nth-child(2)
-  @include width_height(100px, 50px)
-.chouse__form-tablink:last-child
-  @include width_height(602px, 50px)
-
-.chouse__form-tabcontent
-  @include flexContainer(row, space-between, start)
-  padding: 50px 60px 60px 70px
-  width: 100%
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
-
-.chouse__form-left-container
-  @include flexContainer(column, center, start)
-  margin-right: 65px
-
-.chouse__form-text-block
-  max-width: 590px
-  p
-    @extend %extend__text
-    opacity: 60%
-    line-height: 160.2%
-    margin-bottom: 48px
-
-.chouse__form-inputs-container
-  @include flexContainer(row, center, stretch)
-
-.chouse__form-input-group
-  margin-right: 30px
-.chouse__form-input-group:last-child
-  margin-right: 0px
-
-#chouse__form-input1,
-#chouse__form-input3,
-#chouse__form-input5,
-#chouse__form-input7
-  margin-bottom: 10px
-
-#chouse__form-input1,
-#chouse__form-input2,
-#chouse__form-input3,
-#chouse__form-input4
-  @include width_height(230px, 60px)
-  @extend %extend__input-chouse
-
-#chouse__form-input5,
-#chouse__form-input6
-  @include width_height(125px, 60px)
-  @extend %extend__input-chouse
-
-#chouse__form-input7,
-#chouse__form-input8
-  @include width_height(90px, 60px)
-  @extend %extend__input-chouse
-
-input[type="text"]::placeholder
-  font-weight: 600
-
-.chouse__form-input-title
-  @extend %extend__text
-  color: $color_blue
-  font-weight: 600
-  margin-bottom: 21px
-  padding-left: 17px
-
-.chouse__form-right-container
-  @include flexContainer(column, center, start)
-
-.chouse__form-download-container
-  @include flexContainer(column, center, center)
-
-.chouse__form-download-title
-  @extend %extend__text
-  font-weight: 500
-  line-height: 160.2%
-  color: $color_blue
-  margin-bottom: 12px
-
-.chouse__form-download-extension
-  @include flexContainer(row, flex-start, center)
-  width: 100%
-  margin-bottom: 30px
-  span
-    margin-right: 10px
+  .chouse__form-tablink
     @extend %extend__text
     line-height: 160.2%
-    opacity: 60%
+    font-weight: 500
+    color: $color_blue
+    border: 2px solid $color_main
+    margin: -2px
+    background-color: $color_white
+    &:hover
+      color: $color_white
+      background-color: $color_main
+
+  .chouse__form-tablink:first-child
+    @include width_height(170px, 50px)
+  .chouse__form-tablink:nth-child(2)
+    @include width_height(100px, 50px)
+  .chouse__form-tablink:last-child
+    @include width_height(602px, 50px)
+
+  .chouse__form-tabcontent
+    @include flexContainer(row, space-between, start)
+    padding: 50px 60px 60px 70px
+    width: 100%
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px
+
+  .chouse__form-left-container
+    @include flexContainer(column, center, start)
+    margin-right: 65px
+
+  .chouse__form-text-block
+    max-width: 590px
+    p
+      @extend %extend__text
+      opacity: 60%
+      line-height: 160.2%
+      margin-bottom: 48px
+
+  .chouse__form-inputs-container
+    @include flexContainer(row, center, stretch)
+
+  .chouse__form-input-group
+    margin-right: 30px
+  .chouse__form-input-group:last-child
+    margin-right: 0px
+
+  #chouse__form-input1,
+  #chouse__form-input3,
+  #chouse__form-input5,
+  #chouse__form-input7
+    margin-bottom: 10px
+
+  #chouse__form-input1,
+  #chouse__form-input2,
+  #chouse__form-input3,
+  #chouse__form-input4
+    @include width_height(230px, 60px)
+    @extend %extend__input-chouse
+
+  #chouse__form-input5,
+  #chouse__form-input6
+    @include width_height(125px, 60px)
+    @extend %extend__input-chouse
+
+  #chouse__form-input7,
+  #chouse__form-input8
+    @include width_height(90px, 60px)
+    @extend %extend__input-chouse
+
+  input[type="text"]::placeholder
     font-weight: 600
+
+  .chouse__form-input-title
+    @extend %extend__text
+    color: $color_blue
+    font-weight: 600
+    margin-bottom: 21px
+    padding-left: 17px
+
+  .chouse__form-right-container
+    @include flexContainer(column, center, start)
+
+  .chouse__form-download-container
+    @include flexContainer(column, center, center)
+
+  .chouse__form-download-title
+    @extend %extend__text
+    font-weight: 500
+    line-height: 160.2%
+    color: $color_blue
+    margin-bottom: 12px
+
+  .chouse__form-download-extension
+    @include flexContainer(row, flex-start, center)
+    width: 100%
+    margin-bottom: 30px
+    span
+      margin-right: 10px
+      @extend %extend__text
+      line-height: 160.2%
+      opacity: 60%
+      font-weight: 600

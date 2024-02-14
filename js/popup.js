@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-	setTimeout(openPopup, 5000)
+	setTimeout(openPopup, 10000)
 })
 
 function openPopup() {

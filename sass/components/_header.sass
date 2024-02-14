@@ -6,150 +6,145 @@ header
   position: relative
   margin-bottom: 111px
 
-.header__inner
-  @include flexContainer(column, flex-start, stretch)
-  padding-top: 30px
+  .header__inner
+    @include flexContainer(column, flex-start, stretch)
+    padding-top: 30px
 
-.navbar
-  @include flexContainer(row, space-between, center)
-  margin-bottom: 60px
+  .navbar
+    @include flexContainer(row, space-between, center)
+    margin-bottom: 60px
 
-.navbar__logo
-  img
-    @include width_height(110px, 110px)
+  .navbar__logo
+    img
+      @include width_height(110px, 110px)
 
-.navbar__menu
-  max-width: 651px
-  width: 100%
-  ul
-    @include flexContainer(row, space-around, center)
+  .navbar__menu
+    max-width: 651px
+    width: 100%
+    ul
+      @include flexContainer(row, space-around, center)
+      li
+        @extend %extend__text
+        line-height: 160.2%
+        font-weight: bold
+        a
+          list-style-type: none
+          color: $color_main
+
+  .navbar__contacts
+    ul
+      @include flexContainer(column, space-between, end)
     li
       @extend %extend__text
-      line-height: 160.2%
+      line-height: 150%
       font-weight: bold
       a
         list-style-type: none
         color: $color_main
 
-.navbar__contacts
-  ul
-    @include flexContainer(column, space-between, end)
-  li
-    @extend %extend__text
-    line-height: 150%
-    font-weight: bold
-    a
-      list-style-type: none
-      color: $color_main
+  .header__context
+    @include flexContainer(row, flex-start, center)
+    margin-bottom: 137px
 
-.header__context
-  @include flexContainer(row, flex-start, center)
-  margin-bottom: 137px
-
-.header__context_about
-  @include flexContainer(column, center, stretch)
-  max-width: 500px
-  width: 100%
-  h1
-    @extend %extend__text
-    font-size: 4em
-    font-weight: bold
-    letter-spacing: -0.5px
-    margin-bottom: 44px
-    text-transform: uppercase
-  p
-    @extend %extend__text
-    font-size: 2.4em
-    font-weight: bold
-    letter-spacing: -0.5px
-    span
-      color: $color_blue
-
-.header__context_picture
-  img
-    position: absolute
-    top: 163.81px
-    max-width: 100%
-
-.header__form_context
-  p
-    opacity: 60%
-    text-align: center
-    @extend %extend__text
-    line-height: 160.2%
-    font-weight: 500
-
-.header__form
-  form
-    @include flexContainer(row, center, stretch)
-    margin-bottom: 30px
-    div
-      margin-right: 30px
-      input
-        margin-bottom: 10px
-    div:last-child()
-      margin-right: 0px
-      input
-        margin-bottom: 0px
-
-#input1,
-#input3
-  @include width_height(370px, 60px)
-  @extend %extend__input
-  font-weight: 600
-  background-image: url('/img/header/form/location.svg')
-  padding: 19px 48px
-  font-size: 1.6em
-  color: $color_blue
-
-#input2,
-#input4
-  @include width_height(170px, 60px)
-  @extend %extend__input
-  font-weight: 600
-  background-image: url('/img/header/form/weight.svg')
-  padding: 19px 48px
-  font-size: 1.6em
-  color: $color_blue
-
-.header__form_label
-  position: absolute
-  right: 18px
-  cursor: pointer
-  opacity: 100%
-  img:first-child
-    margin-top: 11px
-  img:last-child
-    margin-top: 11px
-
-.round-checkbox
-  @extend %extend__round_checkbox
-  margin-left: 18px
-  margin-right: 10px
-
-.header__form_info
-  @include flexContainer(row, center, stretch)
-  margin-bottom: 38px
-  table
-    margin-right: 31px
-    border-collapse: separate
-    border-spacing: 0 0
-    tr
-      text-align: center
-      th
-        @extend %extend__text
-        margin-bottom: 4px
-        opacity: 60%
-        padding-right: 59px
-        font-weight: 600
-        line-height: 160.2%
-      td
-        @extend %extend__text
-        font-size: 3em
-        letter-spacing: -0.5px
+  .header__context_about
+    @include flexContainer(column, center, stretch)
+    max-width: 500px
+    width: 100%
+    h1
+      @extend %extend__text
+      font-size: 4em
+      font-weight: bold
+      letter-spacing: -0.5px
+      margin-bottom: 44px
+      text-transform: uppercase
+    p
+      @extend %extend__text
+      font-size: 2.4em
+      font-weight: bold
+      letter-spacing: -0.5px
+      span
         color: $color_blue
-        padding-right: 59px
-        font-weight: 600
 
-.btn_sucsess
-  @include width_height(239px, 51px)
+  .header__context_picture
+    img
+      position: absolute
+      top: 163.81px
+      max-width: 100%
+
+  .header__form_context
+    p
+      opacity: 60%
+      text-align: center
+      @extend %extend__text
+      line-height: 160.2%
+      font-weight: 500
+
+  .header__form
+    form
+      @include flexContainer(row, center, stretch)
+      margin-bottom: 30px
+      div
+        margin-right: 30px
+        input
+          margin-bottom: 10px
+      div:last-child()
+        margin-right: 0px
+        input
+          margin-bottom: 0px
+
+  #input1,
+  #input3
+    @include width_height(370px, 60px)
+    @extend %extend__input
+    font-weight: 600
+    background-image: url('/img/header/form/location.svg')
+    padding: 19px 48px
+    font-size: 1.6em
+    color: $color_blue
+
+  #input2,
+  #input4
+    @include width_height(170px, 60px)
+    @extend %extend__input
+    font-weight: 600
+    background-image: url('/img/header/form/weight.svg')
+    padding: 19px 48px
+    font-size: 1.6em
+    color: $color_blue
+
+  .header__form_label
+    position: absolute
+    right: 18px
+    cursor: pointer
+    opacity: 100%
+    img:first-child
+      margin-top: 11px
+    img:last-child
+      margin-top: 11px
+
+  .header__form_info
+    @include flexContainer(row, center, stretch)
+    margin-bottom: 38px
+    table
+      margin-right: 31px
+      border-collapse: separate
+      border-spacing: 0 0
+      tr
+        text-align: center
+        th
+          @extend %extend__text
+          margin-bottom: 4px
+          opacity: 60%
+          padding-right: 59px
+          font-weight: 600
+          line-height: 160.2%
+        td
+          @extend %extend__text
+          font-size: 3em
+          letter-spacing: -0.5px
+          color: $color_blue
+          padding-right: 59px
+          font-weight: 600
+
+  .btn_sucsess
+    @include width_height(239px, 51px)

@@ -52,7 +52,7 @@
 
 					<div class="header__form_context">
 						<div class="header__form">
-							<form>
+							<form name="header__form1">
 								<div>
 									<label for="input1"></label>
 									<input type="text" id="input1" name="input" placeholder="Откуда" /><br />
@@ -234,6 +234,7 @@
 					<h2 class="chouse__inner-title">Выберите город, в котором требуется услуга ответственного хранения</h2>
 					<div class="chouse__form">
 						<!--  -->
+
 						<div class="chouse__form-tabs">
 							<button class="chouse__form-tablink" id="defaultOpenTab">Москва</button>
 							<button class="chouse__form-tablink">СПб</button>
@@ -241,53 +242,55 @@
 						</div>
 
 						<div id="Tab1" class="chouse__form-tabcontent">
-							<div class="chouse__form-left-container">
-								<div class="chouse__form-text-block">
-									<p>
-										Такая услуга, как ответственное хранение позволит временно поместить Ваш груз на нашем складе, оплатив только занимаемую площадь. Таким образом, сократив Ваши расходы на
-										логистические услуги. Вы получите площадь хранения любого нужного размера, с возможностью изменения. Мы возьмём на себя комплектацию, формирование заказов (внутреннюю проверку,
-										маркировку, сортировку, переупаковку и т.п.) и осуществим адресную доставку клиентам.
-									</p>
+							<form name="chouse__form2">
+								<div class="chouse__form-left-container">
+									<div class="chouse__form-text-block">
+										<p>
+											Такая услуга, как ответственное хранение позволит временно поместить Ваш груз на нашем складе, оплатив только занимаемую площадь. Таким образом, сократив Ваши расходы на
+											логистические услуги. Вы получите площадь хранения любого нужного размера, с возможностью изменения. Мы возьмём на себя комплектацию, формирование заказов (внутреннюю проверку,
+											маркировку, сортировку, переупаковку и т.п.) и осуществим адресную доставку клиентам.
+										</p>
+									</div>
+
+									<div class="chouse__form-inputs-container">
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Позиция</h6>
+											<label for="chouse__form-input1"></label>
+											<input type="text" id="chouse__form-input1" name="input" placeholder="Пример" /><br />
+
+											<label for="chouse__form-input2"></label>
+											<input type="text" id="chouse__form-input2" name="input" placeholder="Пример" />
+										</div>
+
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Описание</h6>
+											<label for="chouse__form-input3"></label>
+											<input type="text" id="chouse__form-input3" name="input" placeholder="Пример" /><br />
+
+											<label for="chouse__form-input4"></label>
+											<input type="text" id="chouse__form-input4" name="input" placeholder="Пример" />
+										</div>
+
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Ед. изм.</h6>
+											<label for="chouse__form-input5"></label>
+											<input type="text" id="chouse__form-input5" name="input" placeholder="Килограмм" /><br />
+
+											<label for="chouse__form-input6"></label>
+											<input type="text" id="chouse__form-input6" name="input" placeholder="Килограмм" />
+										</div>
+
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Цена, Р</h6>
+											<label for="chouse__form-input7"></label>
+											<input type="text" id="chouse__form-input7" name="input" placeholder="10000" /><br />
+
+											<label for="chouse__form-input8"></label>
+											<input type="text" id="chouse__form-input8" name="input" placeholder="10000" />
+										</div>
+									</div>
 								</div>
-
-								<div class="chouse__form-inputs-container">
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Позиция</h6>
-										<label for="chouse__form-input1"></label>
-										<input type="text" id="chouse__form-input1" name="input" placeholder="Пример" /><br />
-
-										<label for="chouse__form-input2"></label>
-										<input type="text" id="chouse__form-input2" name="input" placeholder="Пример" />
-									</div>
-
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Описание</h6>
-										<label for="chouse__form-input3"></label>
-										<input type="text" id="chouse__form-input3" name="input" placeholder="Пример" /><br />
-
-										<label for="chouse__form-input4"></label>
-										<input type="text" id="chouse__form-input4" name="input" placeholder="Пример" />
-									</div>
-
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Ед. изм.</h6>
-										<label for="chouse__form-input5"></label>
-										<input type="text" id="chouse__form-input5" name="input" placeholder="Килограмм" /><br />
-
-										<label for="chouse__form-input6"></label>
-										<input type="text" id="chouse__form-input6" name="input" placeholder="Килограмм" />
-									</div>
-
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Цена, Р</h6>
-										<label for="chouse__form-input7"></label>
-										<input type="text" id="chouse__form-input7" name="input" placeholder="10000" /><br />
-
-										<label for="chouse__form-input8"></label>
-										<input type="text" id="chouse__form-input8" name="input" placeholder="10000" />
-									</div>
-								</div>
-							</div>
+							</form>
 
 							<div class="chouse__form-right-container">
 								<div class="chouse__form-download-container">
@@ -399,7 +402,7 @@
 			<div class="container">
 				<div class="request__form">
 					<h2>Название заголовка</h2>
-					<form>
+					<form name="request__form3">
 						<!-- LEFT BOX -->
 
 						<div class="request__form_left-box">
