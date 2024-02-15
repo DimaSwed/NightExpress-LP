@@ -2,33 +2,59 @@
   padding-top: 30px
   padding-bottom: 24px
 
-.footer__inner
-  @include flexContainer(column, center, center)
+  .footer__inner
+    @include flexContainer(column, center, center)
 
-.footer__inner_flex
-  @include flexContainer(row, space-between, center)
-  width: 100%
-  margin-bottom: 30px
-  div:first-child
-    p
-      @extend %extend__text
-      font-family: $font_family__footer
-      line-height: 24px
-      font-weight: 600
-  div:last-child
+  .footer__inner_flex
     @include flexContainer(row, space-between, center)
-    img
-      margin-right: 31px
-    p
-      @extend %extend__text
-      font-size: 1.7em
-      line-height: 24px
-      font-weight: 700
+    width: 100%
+    margin-bottom: 30px
+    div:first-child
+      p
+        @extend %extend__text
+        font-family: $font_family__footer
+        line-height: 24px
+        font-weight: 600
+    div:last-child
+      @include flexContainer(row, space-between, center)
+      img
+        margin-right: 31px
+      p
+        @extend %extend__text
+        font-size: 1.7em
+        line-height: 24px
+        font-weight: 700
 
-.footer__inner_context
-  p
-    text-align: center
-    @extend %extend__text
-    line-height: 160.2%
-    font-weight: 500
-    opacity: 60%
+  .footer__inner_context
+    p
+      text-align: center
+      @extend %extend__text
+      line-height: 160.2%
+      font-weight: 500
+      opacity: 60%
+
+// MEDIA BREAKPOINTS
+
+@include desktop
+  .footer
+
+@include laptop
+  .footer
+
+@include tablet
+  .footer
+
+@include mobile
+  .footer
+
+@include mobileExtra
+  .footer
+    .footer__inner_flex
+      flex-direction: column
+      max-width: 100%
+      div
+        margin-bottom: 15px
+    .footer__inner_context
+      p
+        font-size: 12px
+        line-height: 100%

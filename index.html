@@ -19,13 +19,31 @@
 
 						<div class="navbar__menu">
 							<ul>
-								<li><a href="#">Рассчитать доставку</a></li>
-								<li><a href="#">Дополнительные услуги</a></li>
-								<li><a href="#">Контакты</a></li>
-								<li><a href="#">Заказать</a></li>
+								<li><a href="#header">Рассчитать доставку</a></li>
+								<li><a href="#chouse">Дополнительные услуги</a></li>
+								<li><a href="#contacts">Контакты</a></li>
+								<li><a href="#request">Заказать</a></li>
+							</ul>
+						</div>
+						<!-- mobile menu -->
+						<div class="hamburger__menu">
+							<input id="menu__toggle" type="checkbox" class="menu__toggle" />
+							<label class="menu__btn" for="menu__toggle">
+								<span></span>
+							</label>
+
+							<ul class="hamburger__menu_box">
+								<li class="hamburger__menu_box_item"><a href="#info">Рассчитать доставку</a></li>
+								<li class="hamburger__menu_box_item"><a href="#chouse">Дополнительные услуги</a></li>
+								<li class="hamburger__menu_box_item"><a href="#contacts">Контакты</a></li>
+								<li class="hamburger__menu_box_item"><a href="#request">Заказать</a></li>
+								<span></span>
+								<li><a href="tel:+74952606853">+7 (495) 260 68 53</a></li>
+								<li><a href="mailto:info@A5-EXPRESS.ru">info@A5-EXPRESS.ru</a></li>
 							</ul>
 						</div>
 
+						<!--  -->
 						<div class="navbar__contacts">
 							<ul>
 								<li><a href="tel:+74952606853">+7 (495) 260 68 53</a></li>
@@ -52,7 +70,7 @@
 
 					<div class="header__form_context">
 						<div class="header__form">
-							<form>
+							<form name="header__form1">
 								<div>
 									<label for="input1"></label>
 									<input type="text" id="input1" name="input" placeholder="Откуда" /><br />
@@ -93,7 +111,7 @@
 							</form>
 						</div>
 
-						<div class="header__form_info">
+						<div class="header__form_info" id="info">
 							<table>
 								<tr>
 									<th>Срок доставки:</th>
@@ -228,12 +246,13 @@
 		</div>
 
 		<!-- CHOUSE CITY -->
-		<div class="chouse">
+		<div class="chouse" id="chouse">
 			<div class="container">
 				<div class="chouse__inner">
 					<h2 class="chouse__inner-title">Выберите город, в котором требуется услуга ответственного хранения</h2>
 					<div class="chouse__form">
 						<!--  -->
+
 						<div class="chouse__form-tabs">
 							<button class="chouse__form-tablink" id="defaultOpenTab">Москва</button>
 							<button class="chouse__form-tablink">СПб</button>
@@ -241,53 +260,55 @@
 						</div>
 
 						<div id="Tab1" class="chouse__form-tabcontent">
-							<div class="chouse__form-left-container">
-								<div class="chouse__form-text-block">
-									<p>
-										Такая услуга, как ответственное хранение позволит временно поместить Ваш груз на нашем складе, оплатив только занимаемую площадь. Таким образом, сократив Ваши расходы на
-										логистические услуги. Вы получите площадь хранения любого нужного размера, с возможностью изменения. Мы возьмём на себя комплектацию, формирование заказов (внутреннюю проверку,
-										маркировку, сортировку, переупаковку и т.п.) и осуществим адресную доставку клиентам.
-									</p>
+							<form name="chouse__form2">
+								<div class="chouse__form-left-container">
+									<div class="chouse__form-text-block">
+										<p>
+											Такая услуга, как ответственное хранение позволит временно поместить Ваш груз на нашем складе, оплатив только занимаемую площадь. Таким образом, сократив Ваши расходы на
+											логистические услуги. Вы получите площадь хранения любого нужного размера, с возможностью изменения. Мы возьмём на себя комплектацию, формирование заказов (внутреннюю проверку,
+											маркировку, сортировку, переупаковку и т.п.) и осуществим адресную доставку клиентам.
+										</p>
+									</div>
+
+									<div class="chouse__form-inputs-container">
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Позиция</h6>
+											<label for="chouse__form-input1"></label>
+											<input type="text" id="chouse__form-input1" name="input" placeholder="Пример" /><br />
+
+											<label for="chouse__form-input2"></label>
+											<input type="text" id="chouse__form-input2" name="input" placeholder="Пример" />
+										</div>
+
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Описание</h6>
+											<label for="chouse__form-input3"></label>
+											<input type="text" id="chouse__form-input3" name="input" placeholder="Пример" /><br />
+
+											<label for="chouse__form-input4"></label>
+											<input type="text" id="chouse__form-input4" name="input" placeholder="Пример" />
+										</div>
+
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Ед. изм.</h6>
+											<label for="chouse__form-input5"></label>
+											<input type="text" id="chouse__form-input5" name="input" placeholder="Килограмм" /><br />
+
+											<label for="chouse__form-input6"></label>
+											<input type="text" id="chouse__form-input6" name="input" placeholder="Килограмм" />
+										</div>
+
+										<div class="chouse__form-input-group">
+											<h6 class="chouse__form-input-title">Цена, Р</h6>
+											<label for="chouse__form-input7"></label>
+											<input type="text" id="chouse__form-input7" name="input" placeholder="10000" /><br />
+
+											<label for="chouse__form-input8"></label>
+											<input type="text" id="chouse__form-input8" name="input" placeholder="10000" />
+										</div>
+									</div>
 								</div>
-
-								<div class="chouse__form-inputs-container">
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Позиция</h6>
-										<label for="chouse__form-input1"></label>
-										<input type="text" id="chouse__form-input1" name="input" placeholder="Пример" /><br />
-
-										<label for="chouse__form-input2"></label>
-										<input type="text" id="chouse__form-input2" name="input" placeholder="Пример" />
-									</div>
-
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Описание</h6>
-										<label for="chouse__form-input3"></label>
-										<input type="text" id="chouse__form-input3" name="input" placeholder="Пример" /><br />
-
-										<label for="chouse__form-input4"></label>
-										<input type="text" id="chouse__form-input4" name="input" placeholder="Пример" />
-									</div>
-
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Ед. изм.</h6>
-										<label for="chouse__form-input5"></label>
-										<input type="text" id="chouse__form-input5" name="input" placeholder="Килограмм" /><br />
-
-										<label for="chouse__form-input6"></label>
-										<input type="text" id="chouse__form-input6" name="input" placeholder="Килограмм" />
-									</div>
-
-									<div class="chouse__form-input-group">
-										<h6 class="chouse__form-input-title">Цена, Р</h6>
-										<label for="chouse__form-input7"></label>
-										<input type="text" id="chouse__form-input7" name="input" placeholder="10000" /><br />
-
-										<label for="chouse__form-input8"></label>
-										<input type="text" id="chouse__form-input8" name="input" placeholder="10000" />
-									</div>
-								</div>
-							</div>
+							</form>
 
 							<div class="chouse__form-right-container">
 								<div class="chouse__form-download-container">
@@ -395,11 +416,11 @@
 
 		<!-- REQUEST -->
 
-		<div class="request">
+		<div class="request" id="request">
 			<div class="container">
 				<div class="request__form">
 					<h2>Название заголовка</h2>
-					<form>
+					<form name="request__form3">
 						<!-- LEFT BOX -->
 
 						<div class="request__form_left-box">
@@ -628,11 +649,7 @@
 
 						<div>
 							<input type="radio" id="request__form_checkbox25" name="input" class="round-checkbox" />
-							<label for="request__form_checkbox25">
-								Нажимая на кнопку "Оправить заявку", вы даете согласие на обработку
-								<br />
-								персональных данных в соответствии с Политикой конфиденциальности
-							</label>
+							<label for="request__form_checkbox25"> Нажимая на кнопку "Оправить заявку", вы даете согласие на обработку персональных данных в соответствии с Политикой конфиденциальности </label>
 						</div>
 					</div>
 				</div>
@@ -641,7 +658,7 @@
 
 		<!-- CONTACTS -->
 
-		<div class="contacts">
+		<div class="contacts" id="contacts">
 			<div class="container">
 				<div class="contacts__inner">
 					<div class="contacts__inner_map" id="map"></div>
@@ -728,6 +745,7 @@
 				<span class="close" onclick="closePopup()">&times;</span>
 				<p>
 					Мы хотим узнать ваше мнение. <br />
+					<br />
 					Оцените удобство и информативность нашего сайта.
 				</p>
 				<!-- <button class="btn_sucsess" onclick="openSurvey()">Оценить</button> -->
@@ -746,5 +764,6 @@
 		<script src="js/map.js"></script>
 		<script src="js/scroll_to_up.js"></script>
 		<script src="js/popup.js"></script>
+		<script src="js/burger.js"></script>
 	</body>
 </html>

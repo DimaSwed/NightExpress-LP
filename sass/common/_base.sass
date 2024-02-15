@@ -4,9 +4,7 @@ body
   font: normal 62.5% $font_family__main
   line-height: normal
   font-weight: 400
-  // font-size: 16px
-  // font-style: normal
-  // font-family: $font_family__main
+  font-style: normal
   color: $color_main
   -webkit-appearance: none
   -webkit-font-smoothing: antialiased
@@ -30,8 +28,26 @@ img
 a
   text-decoration: none
 
-  &:hover
-    text-decoration: underline
+input::placeholder
+  color: $color_input
+  font-weight: 600
+  font-size: 16px
 
-// button
-//   @include reset_btn
+input[name="input"]
+  color: $color_blue
+  font-weight: 600
+  font-size: 16px
+
+label
+  font-weight: 500
+  font-size: 16px
+  opacity: 60%
+
+.round-checkbox
+  @extend %extend__round_checkbox
+  margin-left: 18px
+  margin-right: 10px
+
+@include mobile
+  body
+    font-size: 42.5%
