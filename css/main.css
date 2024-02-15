@@ -1530,6 +1530,19 @@ header .btn_sucsess {
   opacity: 60%;
 }
 
+@media (max-width: 414px) {
+  .footer .footer__inner_flex {
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .footer .footer__inner_flex div {
+    margin-bottom: 15px;
+  }
+  .footer .footer__inner_context p {
+    font-size: 12px;
+    line-height: 100%;
+  }
+}
 #scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -1594,4 +1607,13 @@ header .btn_sucsess {
 .emoji {
   font-size: 50px;
   cursor: pointer;
+}
+
+@media (max-width: 414px) {
+  .popup .popup-content {
+    height: 200px;
+  }
+  .popup .emoji {
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=main.css.map */

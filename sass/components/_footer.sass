@@ -32,3 +32,29 @@
       line-height: 160.2%
       font-weight: 500
       opacity: 60%
+
+// MEDIA BREAKPOINTS
+
+@include desktop
+  .footer
+
+@include laptop
+  .footer
+
+@include tablet
+  .footer
+
+@include mobile
+  .footer
+
+@include mobileExtra
+  .footer
+    .footer__inner_flex
+      flex-direction: column
+      max-width: 100%
+      div
+        margin-bottom: 15px
+    .footer__inner_context
+      p
+        font-size: 12px
+        line-height: 100%
