@@ -1469,6 +1469,23 @@ header .btn_sucsess {
   color: #3448AD;
 }
 
+@media (max-width: 1024px) {
+  .contacts {
+    padding-bottom: 100px;
+  }
+  .contacts .contacts__inner_map {
+    margin-bottom: 30px;
+  }
+  .contacts .contacts__inner_context table caption {
+    text-align: center;
+    margin-bottom: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .contacts .contacts__inner_context table tr td:nth-child(2) {
+    padding-right: 0px;
+  }
+}
 .footer {
   padding-top: 30px;
   padding-bottom: 24px;
