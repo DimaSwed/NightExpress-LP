@@ -115,7 +115,7 @@ header #input3 {
   border: 1px solid rgba(18, 38, 103, 0.3);
   cursor: pointer;
   position: relative;
-  top: 4px;
+  top: 3px;
 }
 
 .btn_sucsess {
@@ -925,8 +925,7 @@ header .btn_sucsess {
   .chouse .chouse__form-right-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
   }
   .chouse .chouse__form-download-extension {
@@ -1183,6 +1182,7 @@ header .btn_sucsess {
 .request .request__form_textarea {
   width: 700px;
   height: 245px;
+  display: block;
   resize: none;
   padding: 22px 48px;
   background-image: url("/img/header/form/location.svg");
@@ -1241,6 +1241,7 @@ header .btn_sucsess {
   padding: 20px 48px;
   cursor: pointer;
   outline: 0;
+  background-color: #fff;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -1318,18 +1319,21 @@ header .btn_sucsess {
     margin-right: 0px;
   }
 }
-@media (max-width: 576px) {
-  .request .request__form_right-box .round-checkbox {
-    margin-left: 5px;
-  }
+@media (max-width: 767px) {
   .request .request__form_right-box > div {
     display: flex;
     justify-content: space-around;
   }
+}
+@media (max-width: 576px) {
+  .request .round-checkbox {
+    margin-left: 3px;
+  }
   .request .request__form_textarea {
-    width: 500px;
+    width: 520px;
     height: 245px;
-    padding: 13px 48px;
+    padding: 23px 48px;
+    margin: 0 auto;
   }
   .request .request__form_input4 {
     width: 250px;
@@ -1343,48 +1347,49 @@ header .btn_sucsess {
     text-align: left;
     font-size: 14px;
   }
+  .request .request__form_pushbox div .round-checkbox {
+    width: 35px;
+    height: 35px;
+  }
 }
 @media (max-width: 414px) {
   .request .request__form_right-box {
     grid-template-columns: repeat(1, auto);
-    gap: 10px 10px;
+    gap: 10px;
   }
   .request .request__form_textarea {
-    width: 320px;
+    width: 310px;
     height: 245px;
   }
   .request .request__form_input4 {
     width: 150px;
     height: 50px;
   }
-  .request .request__form_select {
-    margin: 0 auto;
-  }
   .request label {
-    font-size: 12px;
+    font-size: 10px;
   }
   .request .request__form_input {
     width: 300px;
     height: 50px;
-    padding: 10px 48px;
   }
   .request .request__form_input::-moz-placeholder {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
   }
   .request .request__form_input::placeholder {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
   }
   .request .request__form_input4 {
-    padding: 10px 48px;
+    width: 150px;
+    height: 50px;
   }
   .request .request__form_input4::-moz-placeholder {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
   }
   .request .request__form_input4::placeholder {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
   }
   .request .request__form_input2 {
@@ -1392,15 +1397,30 @@ header .btn_sucsess {
     height: 50px;
   }
   .request .request__form_input2::-moz-placeholder {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
   }
   .request .request__form_input2::placeholder {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
   }
-  .request .request__form_checkbox-flex2 label {
-    margin-right: 0px;
+  .request .request__form_checkbox-flex2 > label {
+    margin-right: 10px;
+  }
+  .request .request__form_textarea {
+    padding: 28px 48px;
+  }
+  .request .request__form_textarea::-moz-placeholder {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .request .request__form_textarea::placeholder {
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .request .request__form_select {
+    font-size: 10px;
+    font-weight: 500;
   }
 }
 .contacts {
